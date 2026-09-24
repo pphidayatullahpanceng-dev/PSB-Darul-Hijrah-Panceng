@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPMB SMA Darul Hijrah Panceng</title>
+
+  <!-- FAVICON RESMI LOGO DARUL HIJRAH -->
+  <link rel="icon" type="image/png" href="Logo DH.png" />
+  <link rel="shortcut icon" type="image/png" href="Logo DH.png" />
+  <link rel="apple-touch-icon" href="Logo DH.png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              lime: '#78bd26',
+              limedark: '#68a71f',
+              teal: '#005f6b',
+              tealdeep: '#014d57',
+              btnGreen: '#3eb34a',
+              btnGreenHover: '#339e3f',
+              formTeal: '#00828d',
+              formTealHover: '#006e78'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222222;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+    .fade-right-mask {
+      -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+      mask-image: linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    }
+    .fade-left-mask {
+      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+      mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    }
+    .form-section-pill {
+      background-color: #fdf2f1;
+      color: #1e2554;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 7px 14px;
+      border-radius: 6px;
+      margin-top: 1.25rem;
+      margin-bottom: 0.75rem;
+      width: 100%;
+    }
+    .form-input-custom {
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 8px 14px;
+      font-size: 0.92rem;
+      color: #374151;
+      width: 100%;
+      outline: none;
+      transition: all 0.2s ease;
+      background-color: #ffffff;
+      height: 42px;
+    }
+    textarea.form-input-custom {
+      height: auto;
+    }
+    .form-input-custom:focus {
+      border-color: #00828d;
+      box-shadow: 0 0 0 3px rgba(0, 130, 141, 0.15);
+    }
+    .form-label-custom {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #4b5563;
+      margin-bottom: 5px;
+    }
+    .toast-box {
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .toast-box.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    #contactModalWrapper.hidden {
+      display: none !important;
+    }
+    .logo-dh-img {
+      object-fit: contain;
+      display: block;
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-lime selection:text-white relative">
+  <!-- VIEW 1: LANDING PAGE -->
+  <div id="landingPageView" class="block">
+    <header class="bg-brand-lime sticky top-0 z-40 shadow-sm py-2 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3.5">
+          <!-- Logo DH Topbar -->
+          <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center shrink-0">
+            <img src="Logo DH.png" alt="Logo Darul Hijrah" class="w-full h-full logo-dh-img drop-shadow-md" />
+          </div>
+          <div class="text-white leading-none">
+            <div class="text-2xl sm:text-3xl font-black tracking-tight uppercase">DARUL HIJRAH</div>
+            <div class="text-white/95 text-[11px] font-semibold tracking-wider mt-0.5">ISLAMIC BOARDING SCHOOL</div>
+          </div>
+        </a>
+        <div class="hidden sm:block text-white/95 text-xs font-bold tracking-wider uppercase">
+          PONDOK PESANTREN HIDAYATULLAH PANCENG
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[540px] sm:min-h-[600px] lg:min-h-[660px] flex flex-col justify-between overflow-hidden bg-[#005f6b]">
+      <div class="absolute inset-0 z-0">
+        <img src="IMG_20260923_063851.jpg"
+             alt="SMA Darul Hijrah Panceng"
+             class="w-full h-full object-cover object-right" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#005f6b] via-[#005f6b]/85 to-transparent sm:w-3/4 lg:w-2/3"></div>
+        <div class="absolute inset-0 bg-black/20 sm:hidden"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pt-10 sm:pt-14 pb-6 w-full">
+        <div class="max-w-xl text-white">
+          <div class="flex items-center gap-3.5 mb-6" data-aos="fade-down">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center shrink-0">
+              <img src="Logo DH.png" alt="Logo Darul Hijrah" class="w-full h-full logo-dh-img drop-shadow-lg" />
+            </div>
+            <div class="text-white leading-none">
+              <div class="text-xl sm:text-2xl font-black tracking-tight">DARUL HIJRAH PANCENG</div>
+            </div>
+          </div>
+          <h2 data-aos="fade-up" class="text-sm sm:text-base md:text-lg font-bold tracking-wider uppercase mb-3 drop-shadow-sm">
+            PENERIMAAN SANTRI BARU
+          </h2>
+          <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-1 text-white drop-shadow-md">
+            DARUL HIJRAH
+          </h1>
+          <h2 data-aos="fade-up" data-aos-delay="200" class="text-xl sm:text-2xl md:text-3xl font-bold tracking-wide uppercase mb-3 text-white/95">
+            ISLAMIC BOARDING SCHOOL
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="300" class="text-lg sm:text-xl md:text-2xl font-normal mb-8 text-white/90">
+            "Tahfidz, Leadership, dan Unggul"
+          </p>
+          <div data-aos="zoom-in" data-aos-delay="400">
+            <button onclick="goToRegistrationForm()"
+                    class="bg-brand-btnGreen hover:bg-brand-btnGreenHover text-white font-bold text-lg sm:text-xl px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition duration-200">
+              Daftar Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="relative z-10 w-full px-4 sm:px-8 pb-6 pt-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="bg-white/80 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-white/40 shadow-lg" data-aos="fade-up">
+            <p class="text-gray-800 text-xs sm:text-sm md:text-base leading-relaxed font-medium text-justify">
+              Ma’had Tahfizhul Qur’an Darul Hijrah Panceng merupakan lembaga pendidikan menengah berbasis tahfizh Al-Qur’an yang menyelenggarakan pendidikan jenjang SMA khusus santri putra. Program pendidikan dirancang untuk memadukan pendidikan formal, tahfizh Al-Qur’an dengan target hafalan 5 juz bersanad, leadership, serta pembinaan karakter berbasis tarbiyah. Dengan 1 Musyrif 5 Santri dalam proses pembinaan dilakukan secara dekat dan intensif sehingga perkembangan hafalan, akademik, kedisiplinan, karakter, dan potensi setiap santri dapat mendapatkan perhatian secara optimal.  
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section class="py-12 sm:py-16 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-5 relative" data-aos="fade-right">
+            <div class="overflow-hidden rounded-xl">
+              <img src="halaqoh.jfif"
+                   alt="Pesantren Khairunnas Gedung"
+                   class="w-full h-80 sm:h-96 object-cover fade-right-mask" />
+            </div>
+          </div>
+          <div class="md:col-span-7 space-y-4" data-aos="fade-left">
+            <div class="text-center sm:text-left mb-6">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-lime">Profile</h2>
+            </div>
+            <p class="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+              Pondok Pesantren Hidayatullah Panceng berlokasi di Jl. Daendels, Bukit Kukusan, Desa Campurejo, Kecamatan Panceng, Kabupaten Gresik, Jawa Timur. 
+Pesantren ini berada di bawah naungan Hidayatullah, gerakan dakwah yang didirikan oleh Ustadz Abdullah Said di Balikpapan pada 5 Februari 1973 dalam bentuk pesantren. Pada tanggal 7 Januari 1973 di atas lahan wakaf seluas 120 hektar di Gunung Tembak. Dari pesantren itu, para santri dikirim berdakwah ke berbagai daerah, khususnya wilayah pedalaman dan minoritas Muslim, lalu mendirikan cabang-cabang pesantren baru. Pada Musyawarah Nasional pertama tahun 2000, Hidayatullah mengubah bentuknya menjadi organisasi kemasyarakatan.
+
+            </p>
+            <p class="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+             Pendidikan menengah tahfizh melalui Ma'had Tahfizhul Qur'an Darul Hijrah. Lembaga ini berdiri pada 2012 di Surabaya sebagai bagian dari program DPW Hidayatullah Jawa Timur, mengelola jenjang SMP/MTs dan SMA/MA, serta menargetkan santri hafal 15 juz Al-Qur'an pada setiap jenjang. Cabang Panceng, yang dikenal dengan sebutan DH8, menyelenggarakan jenjang SMA untuk santri putra. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEUNGGULAN SECTION -->
+    <section class="py-12 sm:py-16 bg-white border-t border-gray-100 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-6 space-y-6" data-aos="fade-right">
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-lime mb-6">Program Unggulan</h2>
+            </div>
+            <ul class="space-y-4 text-gray-800 text-sm sm:text-base font-normal">
+              <li class="flex items-start gap-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-black mt-2 shrink-0"></span>
+                <span>Berbasis boarding school</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-black mt-2 shrink-0"></span>
+                <span>Tahfidz 5 Juz Mutqin dan Bersanad</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-black mt-2 shrink-0"></span>
+                <span>Matan Tuhfatul Athfal</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-black mt-2 shrink-0"></span>
+                <span>Matan Muqoddimah Al-Jazari</span>
+              </li>
+            </ul>
+          </div>
+          <div class="md:col-span-6 relative" data-aos="fade-left">
+            <div class="overflow-hidden rounded-xl">
+              <img src="IMG_20260831_054116.jpg"
+                   alt="Santri Lulus 100%"
+                   class="w-full h-80 sm:h-96 object-cover fade-left-mask" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTA TERBATAS SECTION -->
+    <section class="py-14 sm:py-16 bg-brand-teal text-white text-center px-4">
+      <div class="max-w-3xl mx-auto space-y-3" data-aos="zoom-in">
+        <h2 class="text-3xl sm:text-5xl font-black text-brand-lime tracking-tight">Kuota Terbatas</h2>
+        <p class="text-base sm:text-xl font-medium text-white">
+          Segera daftarkan putra Anda sebelum kuota penuh.
+        </p>
+        <p class="text-sm sm:text-base font-normal text-white/90 pb-3">
+          Anda juga bisa pesan untuk tahun ajaran yang akan datang.
+        </p>
+        <div>
+          <button onclick="goToRegistrationForm()"
+                  class="bg-brand-lime hover:bg-brand-limedark text-white font-bold text-base sm:text-lg px-8 py-3 rounded-xl shadow-lg transform hover:scale-105 transition duration-200">
+            Daftar Sekarang
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- KURIKULUM SECTION -->
+    <section class="py-14 sm:py-20 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-5 relative" data-aos="fade-right">
+            <div class="overflow-hidden rounded-xl">
+              <img src="Rihlah.webp"
+                   alt="Suasana Belajar Kelas SMA Khairunnas"
+                   class="w-full h-80 sm:h-96 object-cover fade-right-mask" />
+            </div>
+          </div>
+          <div class="md:col-span-7 space-y-6" data-aos="fade-left">
+            <div class="text-center mb-6">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-lime">Kegiatan Santri</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-8 text-gray-800">
+              <div>
+                <h3 class="text-base sm:text-lg font-bold mb-3">Refreshmen Santri</h3>
+                <ul class="space-y-2 text-sm sm:text-base">
+                  <li class="flex items-start gap-2.5"><span class="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></span><span>Kelas Literasi dan Digitalisasi</span></li>
+                  <li class="flex items-start gap-2.5"><span class="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></span><span>Badminton</span></li>
+                  <li class="flex items-start gap-2.5"><span class="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></span><span>Futsal</span></li>
+                  <li class="flex items-start gap-2.5"><span class="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></span><span>Public Speaking</span></li>
+                  <li class="flex items-start gap-2.5"><span class="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></span><span>Desain Grafis</span></li>
+                  <li class="flex items-start gap-2.5"><span class="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></span><span>Berenang</span></li>
+                  <li class="flex items-start gap-2.5"><span class="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></span><span>Karya tulis Ilmiah</span></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-base sm:text-lg font-bold mb-3">Leadership</h3>
+                <ul class="space-y-2 text-sm sm:text-base">
+                  <li class="flex items-start gap-2.5"><span class="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></span><span>Organisasi Santri Darul Hijrah (OSDA)</span></li>
+                  <li class="flex items-start gap-2.5"><span class="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></span><span>Leadership Camp</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PENDAFTARAN SECTION -->
+    <section class="py-14 sm:py-16 bg-brand-teal text-white text-center px-4">
+      <div class="max-w-3xl mx-auto space-y-3" data-aos="zoom-in">
+        <h2 class="text-3xl sm:text-5xl font-black text-brand-lime tracking-tight">Pendaftaran</h2>
+        <p class="text-base sm:text-xl font-medium text-white pb-3">
+          Isi formulir pendaftaran secara online dengan jenjang yang diinginkan
+        </p>
+        <div>
+          <button onclick="goToRegistrationForm()"
+                  class="bg-brand-lime hover:bg-brand-limedark text-white font-bold text-base sm:text-lg px-8 py-3 rounded-xl shadow-lg transform hover:scale-105 transition duration-200">
+            Formulir Pendaftaran
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASILITAS SECTION -->
+    <section class="relative py-16 sm:py-20 bg-white overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80"
+             alt="Lab Komputer Fasilitas"
+             class="w-full h-full object-cover opacity-15" />
+        <div class="absolute inset-0 bg-white/85"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-8" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-lime mb-6 text-center">Fasilitas</h2>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-8 text-left">
+            Lingkungan pembelajaran yang memberikan dukungan, dilengkapi dengan fasilitas modern yang memungkinkan perkembangan optimal santri di semua bidang:
+          </p>
+          <div class="text-left text-gray-800 text-sm sm:text-base space-y-3.5">
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-black shrink-0"></span>
+              <span class="whitespace-nowrap sm:whitespace-normal">Lokasi belajar yang sejuk, nyaman, aman, dan kondusif</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-black shrink-0"></span>
+              <span class="whitespace-nowrap sm:whitespace-normal">Ruang kelas yang nyaman dan menyatu dengan alam</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-black shrink-0"></span>
+              <span class="whitespace-nowrap sm:whitespace-normal">Ruang perpustakaan dengan koleksi buku bacaan yang memadai</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-black shrink-0"></span>
+              <span class="whitespace-nowrap sm:whitespace-normal">Area hijau yang luas untuk kegiatan pembelajaran pertanian dan peternakan santri</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-black shrink-0"></span>
+              <span class="whitespace-nowrap sm:whitespace-normal">Asrama dengan fasilitas yang memadai</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-black shrink-0"></span>
+              <span class="whitespace-nowrap sm:whitespace-normal">Lapangan olahraga yang luas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-brand-teal text-white pt-14 pb-10 border-t border-brand-tealdeep">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-4 space-y-4" data-aos="fade-up">
+          <div class="flex items-center gap-3.5">
+            <!-- Logo DH pada Footer -->
+            <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center shrink-0">
+              <img src="Logo DH.png" alt="Logo Darul Hijrah" class="w-full h-full logo-dh-img drop-shadow-md" />
+            </div>
+            <div class="leading-tight">
+              <div class="text-[11px] tracking-tight font-semibold whitespace-nowrap">
+                Pondok Pesantren Hidayatullah Panceng
+              </div>
+              <div class="text-2xl font-black tracking-tight">DARUL HIJRAH</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="https://hidayatullahpanceng.netlify.app/" title="Website Resmi" class="w-9 h-9 rounded-full bg-[#007f8f] hover:bg-[#0098ab] flex items-center justify-center text-white text-sm transition shadow">
+              <i class="fas fa-globe"></i>
+            </a>
+            <a href="https://wa.me/6281235953128" target="_blank" title="WhatsApp" class="w-9 h-9 rounded-full bg-[#007f8f] hover:bg-[#0098ab] flex items-center justify-center text-white text-sm transition shadow">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/darulhijrahpancengg/" target="_blank" title="Instagram" class="w-9 h-9 rounded-full bg-[#007f8f] hover:bg-[#0098ab] flex items-center justify-center text-white text-sm transition shadow">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@darulhijrahpanceng" target="_blank" title="TikTok" class="w-9 h-9 rounded-full bg-[#007f8f] hover:bg-[#0098ab] flex items-center justify-center text-white text-sm transition shadow">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-5 space-y-5" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <h4 class="text-brand-lime font-bold text-sm sm:text-base uppercase tracking-normal pb-1 border-b border-brand-lime inline-block mb-2 whitespace-nowrap">
+              Pondok Pesantren Hidayatullah Panceng
+            </h4>
+            <p class="text-sm text-white/90">Jl.Raya Deandles RT.06 RW.02 Prupuh, Panceng, Gresik</p>
+          </div>
+          <div>
+            <h4 class="text-brand-lime font-bold text-sm sm:text-base uppercase tracking-normal pb-1 border-b border-brand-lime inline-block mb-2 whitespace-nowrap">
+              CALL CENTER / HOTLINE
+            </h4>
+            <p class="text-sm text-white/95 flex items-center gap-2 font-medium">
+              <i class="fab fa-whatsapp text-base"></i>
+              <span>SMA Darul Hijrah Panceng: 0812-3595-3128</span>
+            </p>
+          </div>
+        </div>
+        <div class="md:col-span-3 space-y-3" data-aos="fade-up" data-aos-delay="200">
+          <h4 class="text-brand-lime font-bold text-sm sm:text-base uppercase tracking-normal pb-1 border-b border-brand-lime inline-block mb-1">
+            PENDAFTARAN
+          </h4>
+          <p class="text-sm text-white/90 leading-relaxed">
+            Isi Formulir Pendaftaran Secara Online untuk Mendaftar di SMA Darul Hijrah Panceng. Daftarkan Diri Anda Mulai Sekarang untuk Tahun Ajaran yang Akan Datang.
+          </p>
+          <div class="pt-2">
+            <button onclick="goToRegistrationForm()"
+                    class="bg-brand-lime hover:bg-brand-limedark text-white font-bold text-sm px-6 py-2.5 rounded-lg shadow transition">
+              Daftar Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="bg-black py-4 px-4 text-center text-white text-xs sm:text-sm font-medium">
+      @Copyright Pondok Pesantren Hidayatullah Panceng
+    </div>
+
+    <!-- Floating Buttons -->
+    <div class="fixed bottom-5 right-5 z-40 flex items-center gap-2.5">
+      <button onclick="openModal()"
+              class="bg-[#2cb742] hover:bg-[#25a239] text-white font-semibold text-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2 transition transform hover:scale-105 active:scale-95">
+        <i class="fab fa-whatsapp text-lg"></i>
+        <span>Admin</span>
+      </button>
+      <button onclick="scrollToTop()"
+              title="Kembali ke atas"
+              class="w-10 h-10 rounded-full bg-[#1e88e5] hover:bg-[#1976d2] text-white flex items-center justify-center shadow-lg transition transform hover:scale-110 active:scale-95">
+        <i class="fas fa-arrow-up text-sm font-bold"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- VIEW 2: FORMULIR PENDAFTARAN -->
+  <div id="registrationFormView" class="hidden min-h-screen bg-white">
+    <div class="pt-8 pb-4 px-4 text-center">
+      <h1 class="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#2d3748] tracking-normal">
+        Penerimaan Santri Baru Darul Hijrah Panceng
+      </h1>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-2 mb-6">
+      <div class="bg-white border border-gray-100 rounded-xl px-4 sm:px-6 py-3.5 shadow-sm flex items-center justify-between">
+        <div class="flex items-center gap-3.5">
+          <!-- Logo DH Form Header -->
+          <div class="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center shrink-0">
+            <img src="Logo DH.png" alt="Logo Darul Hijrah" class="w-full h-full logo-dh-img drop-shadow-md" />
+          </div>
+          <div class="leading-tight">
+            <div class="text-[11px] sm:text-xs tracking-tight text-[#00828d] font-bold uppercase whitespace-nowrap">
+              Pondok Pesantren Hidayatullah Panceng
+            </div>
+            <div class="text-lg sm:text-2xl font-black text-[#00828d] tracking-tight uppercase">Darul Hijrah</div>
+          </div>
+        </div>
+        <button onclick="goToLandingPage()"
+                class="bg-[#00828d] hover:bg-[#006e78] text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-2.5 rounded-full flex items-center gap-2 shadow-sm transition transform active:scale-95">
+          <i class="fas fa-arrow-left text-xs sm:text-sm"></i>
+          <span>HOME</span>
+        </button>
+      </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div class="lg:col-span-7">
+          <h2 class="text-3xl sm:text-[38px] font-extrabold text-[#1a237e] tracking-tight mb-8">
+            Formulir Pendaftaran
+          </h2>
+          <form id="mainPendaftaranForm" onsubmit="submitRegistrationForm(event)" class="space-y-4">
+            <div>
+              <label class="form-label-custom">Periode Pendaftaran</label>
+              <select id="regPeriode" required class="form-input-custom cursor-pointer text-gray-700">
+                <option value="">- Pilih Periode -</option>
+                <option value="Tahun Ajaran 2027/2028" selected>Tahun Ajaran 2027/2028</option>
+                <option value="Tahun Ajaran 2027/2028 (Gelombang 2)">Tahun Ajaran 2027/2028 (Gelombang 2)</option>
+                <option value="Tahun Ajaran 2028/2029 (Inden)">Tahun Ajaran 2028/2029 (Inden)</option>
+                <option value="Tahun Ajaran 2029/2030 (Inden)">Tahun Ajaran 2029/2030 (Inden)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label-custom">Nama Lengkap</label>
+              <input type="text" id="regNama" required placeholder="Masukkan nama lengkap santri" class="form-input-custom" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="form-label-custom">Tempat Lahir</label>
+                <input type="text" id="regTempatLahir" required placeholder="Kota / Kabupaten Lahir" class="form-input-custom text-gray-700" />
+              </div>
+              <div>
+                <label class="form-label-custom">Tanggal Lahir</label>
+                <input type="date" id="regTanggalLahir" required class="form-input-custom text-gray-700" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="form-label-custom">Jenis Kelamin</label>
+                <select id="regJK" required class="form-input-custom cursor-pointer text-gray-700">
+                  <option value="">Pilih Jenis</option>
+                  <option value="Laki-laki">Laki-laki</option>
+                  <option value="Perempuan">Perempuan</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label-custom">Sekolah Asal</label>
+                <input type="text" id="regSekolahAsal" required placeholder="Nama asal sekolah" class="form-input-custom" />
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label-custom">Nama Ayah / Ibu</label>
+              <input type="text" id="regNamaOrtu" required placeholder="Nama orang tua santri" class="form-input-custom" />
+            </div>
+
+            <div>
+              <label class="form-label-custom">Alamat Domisili</label>
+              <textarea id="regAlamat" rows="3" required placeholder="" class="form-input-custom resize-none"></textarea>
+            </div>
+
+            <!-- PROVINSI & KABUPATEN/KOTA LENGKAP -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="form-label-custom">Provinsi</label>
+                <select id="regProvinsi" required class="form-input-custom cursor-pointer text-gray-700">
+                  <option value="">Memuat data provinsi...</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label-custom">Kabupaten / Kota</label>
+                <select id="regKota" required disabled class="form-input-custom cursor-pointer text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed">
+                  <option value="">- Pilih Provinsi  -</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- KECAMATAN & KELURAHAN LENGKAP -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="form-label-custom">Kecamatan</label>
+                <select id="regKecamatan" required disabled class="form-input-custom cursor-pointer text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed">
+                  <option value="">- Pilih Kab/Kota -</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label-custom">Kelurahan / Desa</label>
+                <select id="regKelurahan" required disabled class="form-input-custom cursor-pointer text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed">
+                  <option value="">- Pilih Kecamatan -</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="form-label-custom">WhatsApp Orang Tua</label>
+                <input type="tel" id="regWA" required placeholder="" class="form-input-custom" />
+              </div>
+              <div>
+                <label class="form-label-custom">Email Aktif</label>
+                <input type="email" id="regEmail" required placeholder="" class="form-input-custom" />
+              </div>
+            </div>
+
+            <!-- DATA AYAH & IBU -->
+            <div class="form-section-pill">Data Ayah</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="form-label-custom">Pekerjaan Ayah</label>
+                <input type="text" id="regPekerjaanAyah" required placeholder="Pekerjaan ayah" class="form-input-custom" />
+              </div>
+              <div>
+                <label class="form-label-custom">Usia Ayah (tahun)</label>
+                <input type="number" id="regUsiaAyah" required placeholder="" class="form-input-custom" />
+              </div>
+            </div>
+
+            <div class="form-section-pill">Data Ibu</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="form-label-custom">Pekerjaan Ibu</label>
+                <input type="text" id="regPekerjaanIbu" required placeholder="Pekerjaan ibu" class="form-input-custom" />
+              </div>
+              <div>
+                <label class="form-label-custom">Usia Ibu (tahun)</label>
+                <input type="number" id="regUsiaIbu" required placeholder="" class="form-input-custom" />
+              </div>
+            </div>
+
+            <div class="form-section-pill">Data Wali (jika berbeda dengan orang tua)</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="form-label-custom">Pekerjaan Wali</label>
+                <input type="text" id="regPekerjaanWali" placeholder="" class="form-input-custom" />
+              </div>
+              <div>
+                <label class="form-label-custom">Usia Wali (tahun)</label>
+                <input type="number" id="regUsiaWali" placeholder="" class="form-input-custom" />
+              </div>
+            </div>
+
+            <!-- SUMBER INFORMASI -->
+            <div class="form-section-pill">Sumber Informasi</div>
+            <div>
+              <label class="form-label-custom">Sumber Info</label>
+              <select id="regSumberInfo" required class="form-input-custom cursor-pointer text-gray-700">
+                <option value="">- Pilih Sumber Info -</option>
+                <option value="Media Sosial (Instagram/Facebook)">Media Sosial (Instagram / Facebook)</option>
+                <option value="Teman / Saudara / Keluarga">Teman / Saudara / Keluarga</option>
+                <option value="Brosur / Spanduk">Brosur / Spanduk</option>
+                <option value="Website Resmi Khairunnas">Website Resmi PSB Darul Hijrah Panceng</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <div class="pt-3">
+              <button type="submit"
+                      class="w-full bg-[#00828d] hover:bg-[#006f79] text-white font-bold text-base py-3 rounded-lg shadow transition transform active:scale-[0.99] flex items-center justify-center gap-2">
+                <i class="fab fa-whatsapp text-lg"></i>
+                <span>Konfirmasi WhatsApp Admin</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Kolom Kanan Ilustrasi -->
+        <div class="lg:col-span-5 sticky top-28 hidden lg:flex flex-col items-center justify-center">
+          <div class="w-full max-w-[440px]">
+            <svg viewBox="0 0 450 600" class="w-full h-auto drop-shadow-xl" xmlns="http://www.w3.org/2000/svg">
+              <rect x="35" y="30" width="380" height="540" rx="22" fill="#f59e0b" />
+              <g transform="translate(145, 10)">
+                <path d="M55 0 C40 0, 35 15, 35 25 L125 25 C125 15, 120 0, 105 0 Z" fill="#9ca3af" />
+                <rect x="42" y="5" width="76" height="15" rx="7" fill="#ffffff" />
+                <rect x="0" y="20" width="160" height="42" rx="8" fill="#94a3b8" />
+                <rect x="15" y="27" width="130" height="26" rx="5" fill="#64748b" />
+              </g>
+              <rect x="55" y="65" width="340" height="485" rx="10" fill="#ffffff" />
+              <text x="225" y="135" font-family="'Poppins', sans-serif" font-size="34" font-weight="900" fill="#334155" text-anchor="middle">Registration</text>
+              <g transform="translate(75, 170)">
+                <path d="M12 28 L24 40 L52 10" stroke="#16a34a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <rect x="75" y="16" width="200" height="12" rx="6" fill="#cbd5e1" />
+                <rect x="75" y="36" width="160" height="10" rx="5" fill="#e2e8f0" />
+              </g>
+              <g transform="translate(75, 245)">
+                <path d="M12 28 L24 40 L52 10" stroke="#16a34a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <rect x="75" y="16" width="200" height="12" rx="6" fill="#cbd5e1" />
+                <rect x="75" y="36" width="175" height="10" rx="5" fill="#e2e8f0" />
+              </g>
+              <g transform="translate(75, 320)">
+                <path d="M12 28 L24 40 L52 10" stroke="#16a34a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <rect x="75" y="16" width="200" height="12" rx="6" fill="#cbd5e1" />
+                <rect x="75" y="36" width="140" height="10" rx="5" fill="#e2e8f0" />
+              </g>
+              <g transform="translate(195, 410) rotate(-15)">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="#2563eb" stroke-width="5" opacity="0.85" />
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6,4" opacity="0.85" />
+                <rect x="10" y="35" width="80" height="30" rx="4" fill="#2563eb" opacity="0.9" />
+                <text x="50" y="55" font-family="'Poppins', sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">APPROVED</text>
+              </g>
+              <path d="M345 550 L395 500 L345 500 Z" fill="#e2e8f0" opacity="0.8" />
+              <path d="M0 450 C30 430, 60 440, 75 480 C85 510, 70 550, 45 580 L0 600 Z" fill="#fed7aa" />
+              <g transform="translate(320, 350)">
+                <g transform="rotate(-40)">
+                  <rect x="-10" y="0" width="20" height="110" rx="3" fill="#0284c7" />
+                  <polygon points="-10,0 10,0 0,-25" fill="#fcd34d" />
+                  <polygon points="-4,-15 4,-15 0,-25" fill="#0f172a" />
+                  <rect x="-10" y="110" width="20" height="18" rx="4" fill="#f43f5e" />
+                  <rect x="-10" y="105" width="20" height="8" fill="#cbd5e1" />
+                </g>
+                <path d="M-5 40 C15 35, 45 50, 60 70 C75 90, 80 130, 65 170 C40 180, 10 160, 5 130 Z" fill="#fed7aa" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Floating Scroll To Top Form View -->
+    <div class="fixed bottom-6 right-6 z-40">
+      <button onclick="scrollToTop()"
+              title="Kembali ke atas"
+              class="w-12 h-12 rounded-full bg-[#00828d] hover:bg-[#006f79] text-white flex items-center justify-center shadow-lg transition transform hover:scale-105 active:scale-95">
+        <i class="fas fa-arrow-up text-base font-bold"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST SUKSES -->
+  <div id="toastNotification" class="toast-box fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-gray-900 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 border border-gray-700">
+    <div class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center font-bold">
+      <i class="fas fa-check"></i>
+    </div>
+    <div>
+      <h4 class="font-bold text-sm">Formulir Terkirim!</h4>
+      <p class="text-xs text-gray-300">Data Anda sedang dialihkan ke WhatsApp Admin...</p>
+    </div>
+  </div>
+
+  <!-- MODAL ADMIN CEPAT -->
+  <div id="contactModalWrapper" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div onclick="closeModal()" class="fixed inset-0 bg-black/60 backdrop-blur-xs"></div>
+    <div class="relative bg-white rounded-xl max-w-md w-full p-6 shadow-2xl z-10">
+      <div class="flex justify-between items-center pb-3 border-b border-gray-200 mb-4">
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 flex items-center gap-2">
+          <i class="fas fa-envelope text-brand-lime"></i>
+          <span>KIRIM PESAN ADMIN</span>
+        </h3>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-700 text-2xl font-bold leading-none">
+          &times;
+        </button>
+      </div>
+      <form id="contactForm" onsubmit="handleQuickAdminSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Lengkap</label>
+          <input type="text" id="quickNama" required placeholder="Masukkan nama lengkap"
+                 class="w-full px-3.5 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-lime" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Alamat</label>
+          <textarea id="quickAlamat" rows="3" required placeholder="Masukkan alamat domisili"
+                    class="w-full px-3.5 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-lime resize-none"></textarea>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">No. Whatsapp</label>
+          <input type="tel" id="quickWA" required placeholder=""
+                 class="w-full px-3.5 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-lime" />
+        </div>
+        <div class="flex justify-end gap-2 pt-2 border-t border-gray-100">
+          <button type="button" onclick="closeModal()"
+                  class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 font-medium text-sm hover:bg-gray-50 transition">
+            Close
+          </button>
+          <button type="submit"
+                  class="px-5 py-2 rounded-lg bg-brand-lime hover:bg-brand-limedark text-white font-semibold text-sm shadow transition">
+            Kirim Sekarang
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    const NOMOR_WA_ADMIN = "6281235953128";
+
+    AOS.init({
+      once: true,
+      duration: 750,
+      easing: 'ease-out-cubic',
+      offset: 50
+    });
+
+    const landingView = document.getElementById('landingPageView');
+    const formView = document.getElementById('registrationFormView');
+    const toast = document.getElementById('toastNotification');
+
+    function goToRegistrationForm() {
+      landingView.classList.add('hidden');
+      landingView.classList.remove('block');
+      formView.classList.remove('hidden');
+      formView.classList.add('block');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.location.hash = 'pendaftaran';
+    }
+
+    function goToLandingPage() {
+      formView.classList.add('hidden');
+      formView.classList.remove('block');
+      landingView.classList.remove('hidden');
+      landingView.classList.add('block');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+      AOS.refresh();
+    }
+
+    // =========================================================================
+    // API WILAYAH RESMI LENGKAP SE-INDONESIA
+    // =========================================================================
+    const selProv = document.getElementById('regProvinsi');
+    const selKota = document.getElementById('regKota');
+    const selKec = document.getElementById('regKecamatan');
+    const selKel = document.getElementById('regKelurahan');
+
+    const BASE_API = 'https://www.emsifa.com/api-wilayah-indonesia/api';
+
+    async function loadProvinces() {
+      try {
+        const res = await fetch(`${BASE_API}/provinces.json`);
+        const provinces = await res.json();
+        selProv.innerHTML = '<option value="">- Pilih Provinsi -</option>';
+        provinces.forEach(p => {
+          const opt = document.createElement('option');
+          opt.value = p.id;
+          opt.dataset.name = p.name;
+          opt.textContent = p.name;
+          selProv.appendChild(opt);
+        });
+      } catch (err) {
+        selProv.innerHTML = '<option value="">Gagal memuat provinsi</option>';
+      }
+    }
+
+    selProv.addEventListener('change', async function() {
+      const provId = this.value;
+      selKota.innerHTML = '<option value="">Memuat kota/kabupaten...</option>';
+      selKec.innerHTML = '<option value="">- Pilih Kab/Kota Dahulu -</option>';
+      selKel.innerHTML = '<option value="">- Pilih Kecamatan Dahulu -</option>';
+      selKota.disabled = true;
+      selKec.disabled = true;
+      selKel.disabled = true;
+
+      if (!provId) {
+        selKota.innerHTML = '<option value="">- Pilih Provinsi Dahulu -</option>';
+        return;
+      }
+
+      try {
+        const res = await fetch(`${BASE_API}/regencies/${provId}.json`);
+        const regencies = await res.json();
+        selKota.innerHTML = '<option value="">- Pilih Kabupaten/Kota -</option>';
+        regencies.forEach(r => {
+          const opt = document.createElement('option');
+          opt.value = r.id;
+          opt.dataset.name = r.name;
+          opt.textContent = r.name;
+          selKota.appendChild(opt);
+        });
+        selKota.disabled = false;
+      } catch (err) {
+        selKota.innerHTML = '<option value="">Gagal memuat kota</option>';
+      }
+    });
+
+    selKota.addEventListener('change', async function() {
+      const kotaId = this.value;
+      selKec.innerHTML = '<option value="">Memuat kecamatan...</option>';
+      selKel.innerHTML = '<option value="">- Pilih Kecamatan Dahulu -</option>';
+      selKec.disabled = true;
+      selKel.disabled = true;
+
+      if (!kotaId) {
+        selKec.innerHTML = '<option value="">- Pilih Kab/Kota Dahulu -</option>';
+        return;
+      }
+
+      try {
+        const res = await fetch(`${BASE_API}/districts/${kotaId}.json`);
+        const districts = await res.json();
+        selKec.innerHTML = '<option value="">- Pilih Kecamatan -</option>';
+        districts.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d.id;
+          opt.dataset.name = d.name;
+          opt.textContent = d.name;
+          selKec.appendChild(opt);
+        });
+        selKec.disabled = false;
+      } catch (err) {
+        selKec.innerHTML = '<option value="">Gagal memuat kecamatan</option>';
+      }
+    });
+
+    selKec.addEventListener('change', async function() {
+      const kecId = this.value;
+      selKel.innerHTML = '<option value="">Memuat kelurahan/desa...</option>';
+      selKel.disabled = true;
+
+      if (!kecId) {
+        selKel.innerHTML = '<option value="">- Pilih Kecamatan Dahulu -</option>';
+        return;
+      }
+
+      try {
+        const res = await fetch(`${BASE_API}/villages/${kecId}.json`);
+        const villages = await res.json();
+        selKel.innerHTML = '<option value="">- Pilih Kelurahan/Desa -</option>';
+        villages.forEach(v => {
+          const opt = document.createElement('option');
+          opt.value = v.id;
+          opt.dataset.name = v.name;
+          opt.textContent = v.name;
+          selKel.appendChild(opt);
+        });
+        selKel.disabled = false;
+      } catch (err) {
+        selKel.innerHTML = '<option value="">Gagal memuat kelurahan</option>';
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash === '#pendaftaran' || window.location.hash === '#daftar') {
+        goToRegistrationForm();
+      }
+      loadProvinces();
+    });
+
+    // =========================================================================
+    // SUBMIT FORMULIR KE WHATSAPP ADMIN
+    // =========================================================================
+    function submitRegistrationForm(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById('regNama').value.trim();
+      const periode = document.getElementById('regPeriode').value;
+      const tempatLahir = document.getElementById('regTempatLahir').value.trim();
+      const tglLahir = document.getElementById('regTanggalLahir').value;
+      const jk = document.getElementById('regJK').value;
+      const sekolah = document.getElementById('regSekolahAsal').value.trim();
+      const namaOrtu = document.getElementById('regNamaOrtu').value.trim();
+      const alamat = document.getElementById('regAlamat').value.trim();
+
+      const namaProv = selProv.options[selProv.selectedIndex]?.dataset.name || selProv.value;
+      const namaKota = selKota.options[selKota.selectedIndex]?.dataset.name || selKota.value;
+      const namaKec = selKec.options[selKec.selectedIndex]?.dataset.name || selKec.value;
+      const namaKel = selKel.options[selKel.selectedIndex]?.dataset.name || selKel.value;
+
+      const wa = document.getElementById('regWA').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const pekerjaanAyah = document.getElementById('regPekerjaanAyah').value.trim();
+      const usiaAyah = document.getElementById('regUsiaAyah').value.trim();
+      const pekerjaanIbu = document.getElementById('regPekerjaanIbu').value.trim();
+      const usiaIbu = document.getElementById('regUsiaIbu').value.trim();
+      const pekerjaanWali = document.getElementById('regPekerjaanWali').value.trim();
+      const usiaWali = document.getElementById('regUsiaWali').value.trim();
+      const sumberInfo = document.getElementById('regSumberInfo').value;
+
+      toast.classList.add('show');
+
+      const pesanWA = `*FORMULIR PENDAFTARAN SANTRI BARU*
+*SMA DARUL HIJRAH PANCENG*
+----------------------------------------
+*Periode:* ${periode}
+*Nama Santri:* ${nama}
+*TTL:* ${tempatLahir}, ${tglLahir}
+*Jenis Kelamin:* ${jk}
+*Sekolah Asal:* ${sekolah}
+*Nama Orang Tua:* ${namaOrtu}
+*No. WhatsApp:* ${wa}
+*Email:* ${email}
+*Alamat Domisili:* ${alamat}
+*Kelurahan/Desa:* ${namaKel}
+*Kecamatan:* ${namaKec}
+*Kabupaten/Kota:* ${namaKota}
+*Provinsi:* ${namaProv}
+*Data Ayah:* ${pekerjaanAyah} (${usiaAyah} th)
+*Data Ibu:* ${pekerjaanIbu} (${usiaIbu} th)
+${pekerjaanWali ? `*Data Wali:* ${pekerjaanWali}${usiaWali ? `(${usiaWali} th)` : ''}\n` : ''}*Sumber Informasi:* ${sumberInfo}
+----------------------------------------
+Mohon konfirmasi dan arahan langkah pendaftaran selanjutnya. Terima kasih.`;
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+        window.open(`https://wa.me/${NOMOR_WA_ADMIN}?text=${encodeURIComponent(pesanWA)}`, '_blank');
+      }, 1000);
+    }
+
+    // Modal Admin Cepat
+    const modalWrapper = document.getElementById('contactModalWrapper');
+    const quickForm = document.getElementById('contactForm');
+
+    function openModal() {
+      modalWrapper.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modalWrapper.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function handleQuickAdminSubmit(e) {
+      e.preventDefault();
+      const nama = document.getElementById('quickNama').value.trim();
+      const alamat = document.getElementById('quickAlamat').value.trim();
+      const wa = document.getElementById('quickWA').value.trim();
+
+      const pesan = `Halo Admin Darul Hijrah, saya ingin bertanya terkait pendaftaran santri baru:\n\n*Nama:* ${nama}\n*Alamat:* ${alamat}\n*WhatsApp:* ${wa}`;
+
+      closeModal();
+      quickForm.reset();
+      window.open(`https://wa.me/${NOMOR_WA_ADMIN}?text=${encodeURIComponent(pesan)}`, '_blank');
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
